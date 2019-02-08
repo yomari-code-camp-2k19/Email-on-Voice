@@ -1,0 +1,282 @@
+{% load static %}
+<html>
+<head>
+    <link rel = "stylesheet" href = {% static 'css/inbox.css' %}>
+    <link rel = "stylesheet" href = {% static 'css/dashboard.css'%}>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+<body onload="voice();">
+<!--
+
+        <div>
+                <ul>
+                        {% for number in shankhya %}
+                          <li>{{ number }}</li>
+                          <break>
+                          <li> </li>
+                        {% endfor %} 
+                </ul>
+                </div>
+                <div>
+                <ul>
+                        {% for email in kasle %}
+                          <li>{{ email }}</li>
+                          <break>
+                          <li> </li>
+                        {% endfor %} 
+                </ul>
+                </div>
+                <div>
+                <ul>
+                        {% for sub in kuro %}
+                          <li>{{ sub }}</li>
+                          <break>
+                          <li> </li>
+                        {% endfor %} 
+                </ul>
+                </div>
+  -->  
+
+
+
+<div class="container">
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+    <div class="mail-box">
+    <aside class="sm-side">
+        <div class="user-head">
+            
+        </div>
+    </aside>
+    <aside class="lg-side">
+    <div class="inbox-head">
+        <h3>Sent Mail</h3>
+        <form action="#" class="pull-right position">
+            <div class="input-append">
+                <input type="text" class="sr-input" placeholder="Search Mail">
+                <button class="btn sr-btn" type="button"><i class="fa fa-search"></i></button>
+            </div>
+        </form>
+    </div>
+        <table class="table table-inbox table-hover">
+        <tbody>
+            <tr class="unread">
+                <td class="inbox-small-cells">
+                    <input type="checkbox" class="mail-checkbox">
+                </td>
+                <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+                <td id="1" class="view-message  dont-show">To:bcc:{{ kasle.0 }}</td>
+                <td id="2" class="view-message ">{{ kuro.0 }}</td>
+                <td class="view-message  inbox-small-cells"><i class="fa fa-paperclip"></i></td>
+                <td class="view-message  text-right">7:10 AM</td>
+            </tr>
+            <tr class="unread">
+                <td class="inbox-small-cells">
+                    <input type="checkbox" class="mail-checkbox">
+                </td>
+                <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+                <td id="3" class="view-message dont-show">To:bcc:{{ kasle.1 }}</td>
+                <td id="4" class="view-message">{{ kuro.1 }}</td>
+                <td class="view-message inbox-small-cells"></td>
+                <td class="view-message text-right">2 Aug</td>
+            </tr>
+            <tr class="">
+                <td class="inbox-small-cells">
+                    <input type="checkbox" class="mail-checkbox">
+                </td>
+                <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+                <td id="5" class="view-message dont-show">To:bcc:{{ kasle.2 }}</td>
+                <td id="6" class="view-message">{{ kuro.2 }}</td>
+                <td class="view-message inbox-small-cells"></td>
+                <td class="view-message text-right">31 Jul</td>
+            </tr>
+            <tr class="">
+                <td class="inbox-small-cells">
+                    <input type="checkbox" class="mail-checkbox">
+                </td>
+                <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+                <td class="view-message dont-show">To:bcc:{{ kasle.3 }}</td>
+                <td class="view-message">{{ kuro.3 }}</td>
+                <td class="view-message inbox-small-cells"></td>
+                <td class="view-message text-right">22 Jul</td>
+            </tr>
+            <tr class="">
+                <td class="inbox-small-cells">
+                    <input type="checkbox" class="mail-checkbox">
+                </td>
+                <td class="inbox-small-cells"><i class="fa fa-star inbox-started"></i></td>
+                <td class="view-message dont-show">To:bcc:{{ kasle.4 }}</td>
+                <td class="view-message">{{ kuro.4 }}</td>
+                <td class="view-message inbox-small-cells"></td>
+                <td class="view-message text-right">22 Jul</td>
+            </tr>
+            <tr class="">
+                <td class="inbox-small-cells">
+                    <input type="checkbox" class="mail-checkbox">
+                </td>
+                <td class="inbox-small-cells"><i class="fa fa-star inbox-started"></i></td>
+                <td class="view-message dont-show">To:bcc:{{ kasle.5 }}</td>
+                <td class="view-message">{{ kuro.5 }}</td>
+                <td class="view-message inbox-small-cells"><i class="fa fa-paperclip"></i></td>
+                <td class="view-message text-right">17 Jul</td>
+            </tr>
+            <tr class="">
+                <td class="inbox-small-cells">
+                    <input type="checkbox" class="mail-checkbox">
+                </td>
+                <td class="inbox-small-cells"><i class="fa fa-star inbox-started"></i></td>
+                <td class="view-message dont-show">To:bcc:{{ kasle.6 }}</td>
+                <td class="view-message">{{ kuro.6 }}</td>
+                <td class="view-message inbox-small-cells"><i class="fa fa-paperclip"></i></td>
+                <td class="view-message text-right">30 Jun</td>
+            </tr>
+            <tr class="">
+                <td class="inbox-small-cells">
+                    <input type="checkbox" class="mail-checkbox">
+                </td>
+                <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+                <td class="view-message dont-show">To:bcc:{{ kasle.7 }}</td>
+                <td class="view-message view-message">{{ kuro.7 }}</td>
+                <td class="view-message inbox-small-cells"></td>
+                <td class="view-message text-right">12 Jun</td>
+            </tr>
+            <tr class="">
+                <td class="inbox-small-cells">
+                    <input type="checkbox" class="mail-checkbox">
+                </td>
+                <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+                <td class="view-message dont-show">To:bcc:{{ kasle.8 }}</td>
+                <td class="view-message view-message">{{ kuro.8 }}</td>
+                <td class="view-message inbox-small-cells"></td>
+                <td class="view-message text-right">10 Jun</td>
+            </tr>
+            <tr class="">
+                <td class="inbox-small-cells">
+                    <input type="checkbox" class="mail-checkbox">
+                </td>
+                <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+                <td class="view-message dont-show">To:bcc:{{ kasle.9 }}</td>
+                <td class="view-message view-message">{{ kuro.9 }}</td>
+                <td class="view-message inbox-small-cells"></td>
+                <td class="view-message text-right">23 May</td>
+            </tr>
+            <tr class="">
+                <td class="inbox-small-cells">
+                    <input type="checkbox" class="mail-checkbox">
+                </td>
+                <td class="inbox-small-cells"><i class="fa fa-star inbox-started"></i></td>
+                <td class="view-message dont-show">To:bcc:{{ kasle.10 }}</td>
+                <td class="view-message">{{ kuro.10 }}</td>
+                <td class="view-message inbox-small-cells"></td>
+                <td class="view-message text-right">18 May</td>
+            </tr>
+            <tr class="">
+                <td class="inbox-small-cells">
+                    <input type="checkbox" class="mail-checkbox">
+                </td>
+                <td class="inbox-small-cells"><i class="fa fa-star inbox-started"></i></td>
+                <td class="dont-show">To:bcc:{{ kasle.11 }}</td>
+                <td class="view-message">{{ kuro.11 }}</td>
+                <td class="view-message inbox-small-cells"><i class="fa fa-paperclip"></i></td>
+                <td class="view-message text-right">4 May</td>
+            </tr>
+            <tr class="">
+                <td class="inbox-small-cells">
+                    <input type="checkbox" class="mail-checkbox">
+                </td>
+                <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+                <td class="view-message dont-show">To:bcc:{{ kasle.12 }}</td>
+                <td class="view-message">{{ kuro.12 }}</td>
+                <td class="view-message inbox-small-cells"><i class="fa fa-paperclip"></i></td>
+                <td class="view-message text-right">28 April </td>
+            </tr>
+            <tr class="">
+                <td class="inbox-small-cells">
+                    <input type="checkbox" class="mail-checkbox">
+                </td>
+                <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+                <td class="dont-show">To:bcc:{{ kasle.13 }}</td>
+                <td class="view-message view-message">{{ kuro.13 }}</td>
+                <td class="view-message inbox-small-cells"></td>
+                <td class="view-message text-right">5 April</td>
+            </tr>
+            <tr class="">
+                <td class="inbox-small-cells">
+                    <input type="checkbox" class="mail-checkbox">
+                </td>
+                <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+                <td class="view-message dont-show">To:bcc:{{ kasle.14 }}</td>
+                <td class="view-message">{{ kuro.14 }}</td>
+                <td class="view-message inbox-small-cells"></td>
+                <td class="view-message text-right">29 March</td>
+            </tr>
+            <tr class="">
+                <td class="inbox-small-cells">
+                    <input type="checkbox" class="mail-checkbox">
+                </td>
+                <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+                <td class="view-message dont-show">To:bcc:{{ kasle.15 }}</td>
+                <td class="view-message">{{ kuro.15 }}</td>
+                <td class="view-message inbox-small-cells"></td>
+                <td class="view-message text-right">3 March</td>
+            </tr>
+            <tr class="">
+                <td class="inbox-small-cells">
+                    <input type="checkbox" class="mail-checkbox">
+                </td>
+                <td class="inbox-small-cells"><i class="fa fa-star inbox-started"></i></td>
+                <td class="view-message dont-show">To:bcc:{{ kasle.16 }}</td>
+                <td class="view-message">{{ kuro.16 }}</td>
+                <td class="view-message inbox-small-cells"></td>
+                <td class="view-message text-right">23 Feb</td>
+            </tr>
+            <tr class="">
+                <td class="inbox-small-cells">
+                    <input type="checkbox" class="mail-checkbox">
+                </td>
+                <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+                <td class="view-message dont-show">To:bcc:{{ kasle.17 }}</td>
+                <td class="view-message view-message">{{ kuro.17 }}</td>
+                <td class="view-message inbox-small-cells"><i class="fa fa-paperclip"></i></td>
+                <td class="view-message text-right">17 Feb</td>
+            </tr>
+            <tr class="">
+                <td class="inbox-small-cells">
+                    <input type="checkbox" class="mail-checkbox">
+                </td>
+                <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+                <td class="view-message dont-show">To:bcc:{{ kasle.18 }}</td>
+                <td class="view-message">{{ kuro.18 }}</td>
+                <td class="view-message inbox-small-cells"><i class="fa fa-paperclip"></i></td>
+                <td class="view-message text-right">2 Feb</td>
+            </tr>
+            <tr class="">
+                <td class="inbox-small-cells">
+                    <input type="checkbox" class="mail-checkbox">
+                </td>
+                <td class="inbox-small-cells"><i class="fa fa-star inbox-started"></i></td>
+                <td class="view-message dont-show">To:bcc:{{ kasle.19 }}</td>
+                <td class="view-message">{{ kuro.19 }}</td>
+                <td class="view-message inbox-small-cells"></td>
+                <td class="view-message text-right">16 Jan</td>
+            </tr>
+            <tr class="">
+                <td class="inbox-small-cells">
+                    <input type="checkbox" class="mail-checkbox">
+                </td>
+                <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+                <td class="view-message dont-show">To:bcc:{{ kasle.20 }}</td>
+                <td class="view-message view-message">{{ kuro.20 }}</td>
+                <td class="view-message inbox-small-cells"><i class="fa fa-paperclip"></i></td>
+                <td class="view-message text-right">12 Jan</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+</aside>
+</div>
+<script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+<script src="{% static 'js/sentmails.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+@import url(https://fonts.googleapis.com/css?family=Dosis:300|Lato:300,400,600,700|Roboto+Condensed:300,700|Open+Sans+Condensed:300,600|Open+Sans:400,300,600,700|Maven+Pro:400,700);
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
+
+body{
+    margin:0px;
+    background: url(http://ultraimg.com/images/Ho6hQWs.jpg);
+    background-size: cover;
+}
+.sidebar{
+    width: 100%;
+    background: #000033;
+    height: 100px;
+    margin-top: 0px;
+}
+ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+}
+
+li{
+    float: left;
+    margin-top: 50px;
+}
+a{
+    top-right: 0px;
+    width:250px;
+    color: white;
+    display:block;
+    text-decoration: none;
+    font-size: 20px;
+    text-align:center;
+    padding:5px;
+    border-radius:10px;
+    font-family: open sans;
+    font-weight:bold;
+}
+input[type=text] {
+    width: 100px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 15px 12px 25px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    position: center;
+}
+
+input[type=text]:focus {
+    width: 50%;
+}
+
+
